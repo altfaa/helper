@@ -63,164 +63,31 @@ int main() {
 
 
 
----------------
-2
 
-#include <set>
+--------------------
 
-3
-
-#include <vector>
-
-4
-
-#include <string>
-
-5
-
-#include <algorithm>
-
-6
-
-#include <chrono>
-
-7
-
-​
-
-8
-
-using namespace std;
-
-9
-
-​
-
-10
-
-const int SAMPLE_COUNT = 5;
-
-11
-
-​
-
-12
-
-vector<int> CountNamesLong(const set<string>& storage, const vector<string>& candidates) {
-
-13
-
-    vector<int> output;
-
-14
-
-    for (auto& name: candidates) {
-
-15
-
-        output.push_back(count(storage.begin(), storage.end(), name));
-
-16
-
-    }
-
-17
-
-    return output;
-
-18
-
-}
-
-19
-
-​
-
-20
-
-vector<int> CountNames(const set<string>& storage, const vector<string>& candidates) {
-
-21
-
-    vector<int> output;
-
-22
-
-    for (auto& name: candidates) {
-
-23
-
-        output.push_back(storage.count(name));
-
-24
-
-    }
-
-25
-
-    return output;
-
-26
-
-}
-
-27
-
-​
-
-28
-
-int main() {
-
-29
-
-    set<string> s;
-
-30
-
-    vector<string> v;
-
-31
-
-    string stra = ""s;
-
-32
-
-    string strb = ""s;
-
-33
-
-​
-
-34
-
-    for (int j = 0; j < 10000; ++j) {
-
-Задание
-Напишите функцию CountNames. Пусть она выясняет, какие слова из списка содержатся во множестве, и возвращает ответ в виде вектора единиц и нулей. Список кандидатов дан в виде вектора строк. Если слово есть во множестве, в ответе будет единица, иначе — ноль. В коде вы видите библиотеку <chrono>. Она содержит элементы, связанные с концептами времени.
-Терминал
 
 Testing slow version
 
-Time difference Long = 7002546[µs]
+Time difference Long = 6607874[µs]
 
-Time difference Long = 6947267[µs]
+Time difference Long = 6777856[µs]
 
-Time difference Long = 6950621[µs]
+Time difference Long = 6722550[µs]
 
-Time difference Long = 6895445[µs]
+Time difference Long = 6762641[µs]
 
-Time difference Long = 6817179[µs]
+Time difference Long = 6726410[µs]
 
 Fast  version
 
-Time difference Fast = 18057[µs]
+Time difference Fast = 15122[µs]
 
-Time difference Fast = 17939[µs]
+Time difference Fast = 15575[µs]
 
-Time difference Fast = 17991[µs]
+Time difference Fast = 15795[µs]
 
-Time difference Fast = 18012[µs]
+Time difference Fast = 16217[µs]
 
-Time difference Fast = 18508[µs]
+Time difference Fast = 16385[µs]
 
